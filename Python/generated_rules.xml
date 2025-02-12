@@ -1,0 +1,25 @@
+<rules>
+	<rule name="lwell-rule-lang-N/A" stopProcessing="true">
+		<match url=".*" />
+		<conditions logicalGrouping="MatchAll">
+			<add input="{HTTP_HOST}" pattern=".*www.rewrite.resideo.com$"/>
+		</conditions>
+		<action type="Redirect" url="https://www.firstalert.com/ca/en/" redirectType="Permanent" appendQueryString="false"/>
+	</rule>
+	<rule name="lwell-rule-lang-about-us" stopProcessing="true">
+		<match url=".*" />
+		<conditions logicalGrouping="MatchAll">
+			<add input="{HTTP_HOST}" pattern=".*www.rewrite.resideo.com$"/>
+			<add input="{REQUEST_URI}" pattern="^about-us$"/>
+		</conditions>
+		<action type="Redirect" url="https://www.firstalert.ccom/ca/en/about-us/" redirectType="Permanent" appendQueryString="false"/>
+	</rule>
+	<rule name="lwell-rule-lang-carbon-monoxide-legislation" stopProcessing="true">
+		<match url=".*" />
+		<conditions logicalGrouping="MatchAll">
+			<add input="{HTTP_HOST}" pattern=".*www.rewrite.resideo.com$"/>
+			<add input="{REQUEST_URI}" pattern="^carbon-monoxide-legislation$"/>
+		</conditions>
+		<action type="Redirect" url="https://www.firstalert.com/ca/en/legislation/" redirectType="Permanent" appendQueryString="false"/>
+	</rule>
+</rules>
